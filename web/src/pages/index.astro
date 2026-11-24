@@ -1,0 +1,11 @@
+---
+import BaseLayout from "@ui/layouts/BaseLayout.astro";
+import LandingView from "@ui/components/LandingView.astro";
+---
+<BaseLayout title="CertiFace — Peritaje de Medios Digitales" description="Análisis forense de imágenes y videos.">
+  <LandingView />
+  <script>
+    document.querySelectorAll("#landing-enter, #landing-enter-top").forEach((button) => button.addEventListener("click", () => window.location.assign("/login")));
+    document.getElementById("landing-protocol")?.addEventListener("click", () => document.getElementById("protocol")?.scrollIntoView({ behavior: "smooth" }));
+  </script>
+</BaseLayout>
